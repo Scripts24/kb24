@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Cosi Azure Black Stencil';
+  src: url('Cosi Azure Black Stencil.eot');
+  src: url('Cosi Azure Black Stencil.eot?#iefix') format('embedded-opentype'),
+       url('Cosi Azure Black Stencil.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CosiAzure-BlackStencil';
+  src: url('CosiAzure-BlackStencil.svg#CosiAzure-BlackStencil') format('svg'),
+       url('CosiAzure-BlackStencil.ttf') format('truetype'),
+       url('CosiAzure-BlackStencil.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: "Cosi Azure Black Stencil";
+    src        : url("../fonts/Cosi\ Azure\ Black\ Stencil.eot");
+    src        : url("./fonts/Cosi Azure Black Stencil.eot?#iefix") format("embedded-opentype"), url("./fonts/Cosi Azure Black Stencil.woff2") format("woff2");
+    font-weight: normal;
+    font-style : normal;
+}
+
+@font-face {
+    font-family: Aquire;
+    src        : local("Aquire Bold"),
+        local("AuireBold-8Ma60"),
+        url('../fonts/aquire-font/AquireBold-8Ma60.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Agoka;
+    src        : local("Agoka FreePersonalUse"),
+        local("Agoka-FreePersonalUse"),
+        url('../fonts/agoka-family-cufonfonts/Agoka-FreePersonalUse.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Vonique;
+    src        : local("Vonique 64 Bold"),
+        local("Vonique 64 Bold"),
+        url('../fonts/vonique-64-cufonfonts/Vonique\ 64\ Bold.ttf');
+    font-weight: bold;
+}
+
+* {
+    margin         : 0;
+    padding        : 0;
+    outline        : none;
+    box-sizing     : border-box;
+    text-decoration: none;
+    list-style     : none;
+}
+
+body {
+    overflow   : hidden;
+    font-family: 'Noto Sans', sans-serif;
+    background : black;
+    color      : white;
+    height     : 100vh;
+    width      : 100%;
+}
+
+
+/*lOADER*/
+
+#preloader {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: black;
+    z-index         : 9999;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.custom-loader {
+    width        : 50px;
+    height       : 50px;
+    position     : relative;
+    border-radius: 50%;
+    background   : repeating-conic-gradient(#0000, #F44E0D 1deg 18deg, #0000 20deg 36deg);
+    animation    : h9 4s infinite linear;
+}
+
+.custom-loader::before {
+    content      : "";
+    position     : absolute;
+    border-radius: 50%;
+    inset        : 0;
+    background   : inherit;
+    animation    : inherit;
+}
+
+@keyframes h9 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}
+
+
+/*HEADER GSAP*/
+
+.container {
+    height    : 100%;
+    width     : 100%;
+    background: url('../img/bg.png');
+}
+
+.container .fixed {
+    position           : fixed;
+    top                : -60px;
+    left               : -4px;
+    font-family        : "Cosi Azure Black Stencil";
+    font-size          : 280px;
+    opacity            : 0.5;
+    -webkit-text-stroke: 2px solid #fff;
+    text-shadow        : 0 0 8px #fff;
+}
+
+.frame {
+    height               : 100%;
+    width                : 90%;
+    display              : grid;
+    grid-template-columns: 50% 50%;
+}
+
+.wrapper {
+    display      : grid;
+    place-items  : center;
+    margin-bottom: 20%;
+}
+
+.img {
+    position: relative;
+}
+
+.img img {
+    position  : absolute;
+    width     : 400px;
+    box-shadow: 0 0 10px black;
+    transform : scale(1);
+}
+
+.img img:first-child {
+    top  : -150px;
+    left : -250px;
+    width: 300px;
+}
+
+.img img:nth-child(2) {
+    top : -30px;
+    left: -180px;
+}
+
+.img img:last-child {
+    top  : 170px;
+    left : 30px;
+    width: 320px;
+}
+
+.heading {
+    position: relative;
+    z-index : 99;
+}
+
+.logo {
+    width      : 100%;
+    text-align : right;
+    font-size  : 25px;
+    padding    : 25px 0;
+    font-family: 'Agoka';
+}
+
+.logo span {
+    display    : inline-block;
+    font-size  : 50px;
+    font-family: 'Vonique';
+}
+
+.text {
+    margin-top: 60px;
+}
+
+.text div {
+    overflow: hidden;
+}
+
+.text h1 {
+    font-family        : 'Aquire';
+    font-size          : 98px;
+    line-height        : 100%;
+    -webkit-text-stroke: 2px solid #fff;
+    text-shadow        : 0 0 8px #fff;
+}
+
+.heading p {
+    padding  : 30px 0;
+    font-size: 19px;
+}
+
+.heading a {
+    font-size         : 18px;
+    color             : #fff;
+    border            : 1px solid #fff;
+    padding           : 14px 20px;
+    font-family       : 'Aquire';
+    -webkit-transition: .5s;
+    transition        : .5s;
+}
+
+.heading a:hover {
+    background: black;
+    color     : #fff;
+}
+
+.heading a:hover~#ball {
+    border: 2px solid crimson;
+}
+
+.cool-text {
+    position      : absolute;
+    font-size     : 40px;
+    right         : 28px;
+    bottom        : 23px;
+    opacity       : 1;
+    margin        : 0;
+    letter-spacing: 6px;
+    animation     : if-off 2s linear infinite;
+    font-family   : "Cosi Azure Black Stencil";
+}
+
+@keyframes if-off {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: .6;
+    }
+
+    56% {
+        opacity: 0;
+    }
+
+    57% {
+        opacity: 0;
+    }
+
+    58% {
+        opacity: .6;
+    }
+
+    71% {
+        transform: scaleY(1) skewX(0deg);
+    }
+
+    72% {
+        transform: scaleY(3) skewX(-60deg);
+    }
+
+    73% {
+        transform: scaleY(1) skewX(0deg);
+    }
+
+    80% {
+        opacity: .6;
+    }
+
+    81% {
+        opacity: 0;
+    }
+
+    82% {
+        opacity: .6;
+    }
+
+    85% {
+        opacity: .6;
+    }
+
+    91% {
+        transform: skewX(1) scaleY(1) skewX(0deg);
+        color    : #fff;
+    }
+
+    92% {
+        transform: skewX(1.5) scaleY(0.2) skewX(80deg);
+        color    : #fff;
+    }
+
+    93% {
+        transform: skewX(1) scaleY(1) skewX(0deg);
+        color    : #fff;
+    }
+
+}
+
+.link_grow {
+    width         : 70px !important;
+    height        : 70px !important;
+    border        : 2px solid #fff;
+    background    : #fff;
+    mix-blend-mode: difference;
+}
+
+.text_grow {
+    width         : 120px !important;
+    height        : 120px !important;
+    border        : 2px solid #000;
+    background    : #fff;
+    mix-blend-mode: difference;
+}
+
+#ball {
+    position           : fixed;
+    display            : block;
+    left               : 0;
+    top                : 0;
+    transform          : translate(-50%, -50%);
+    border-radius      : 50%;
+    pointer-events     : none;
+    width              : 40px;
+    height             : 40px;
+    border             : 2px solid #fff;
+    margin-right       : 14px;
+    z-index            : 9999;
+    transition         : all 0.2s ease;
+    transition-property: background, transform, ;
+}
